@@ -104,7 +104,7 @@ module Chapter5 where
     perfects :: Int -> [Int]
     perfects n = [x | x <- [1..n], sum (fac x) == x]
                     where
-                        fac x = factors x ++ [-x]
+                        fac x = init (factors x)
     
 
     xs = [1,2]
